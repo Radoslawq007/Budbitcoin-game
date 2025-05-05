@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BudBitcoin Game</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to bottom, #0f0f0f, #1b1b1b);
+      color: #e0e0e0;
+      text-align: center;
+      padding: 30px;
+    }
+    h1 {
+      color: #a8ff60;
+    }
+    button {
+      background-color: #222;
+      color: #a8ff60;
+      border: 2px solid #a8ff60;
+      border-radius: 8px;
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #333;
+    }
+    #result {
+      margin-top: 30px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    footer {
+      margin-top: 60px;
+      font-size: 14px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to BudBitcoin: Profit and Chill</h1>
+  <p>Discover a legendary cannabis strain and earn MATIC!</p>
+  <button onclick="playGame()">Play Game</button>
+  <div id="result"></div>
+
+  <footer>
+    Wait for update...
+  </footer>
+
+  <script>
+    const strains = [
+      "OG Kush",
+      "White Widow",
+      "Northern Lights",
+      "Blue Dream",
+      "Sour Diesel",
+      "Lemon Haze"
+    ];
+
+    function playGame() {
+      const picked = strains[Math.floor(Math.random() * strains.length)];
+      document.getElementById("result").innerText = `You discovered: ${picked}!`;
+      // Tutaj można dodać logikę płatności Web3 lub wyświetlanie nagrody
+    }
+  </script>
+</body>
+</html># Budbitcoin-game
